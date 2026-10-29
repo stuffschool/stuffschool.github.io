@@ -1,6 +1,6 @@
 # hypackel.github.io
  
-Welcome to hypackel.github.io, your best option for unblocked games on the internet. This is the GitHub repo which is used to host the website. If you want to use the games on here on your website, please message me on Discord and we can talk! [Discord](https://discord.gg/eHqQ84MEkD)
+Welcome to hypackel.github.io, your best option for unblocked g@mes on the internet. This is the GitHub repo which is used to host the website. If you want to use the g@mes on here on your website, please message me on Discord and we can talk! [Discord](https://discord.gg/eHqQ84MEkD)
 
 <p align="center"><img src="https://invidget.switchblade.xyz/eHqQ84MEkD?theme=dark)](https://discord.gg/eHqQ84MEkD" alt="discord"></img></p>
 
@@ -88,7 +88,7 @@ This project does not require any backend servers, for the best experience, I su
 
 © Hypackel, 2023. Unauthorized use and/or duplication of this material without permission from Echo is strictly prohibited. Excerpts and links may be used, provided that clear credit is given with a link to the original content.
 
-This code is licensed under the **Apache-2.0 License**. I'd like to ask you that you do not copy the code in the repo whatsoever; I take time to build this and I do not need someone just yoinking all of my games for another site. If you have any questions please open an issue!
+This code is licensed under the **Apache-2.0 License**. I'd like to ask you that you do not copy the code in the repo whatsoever; I take time to build this and I do not need someone just yoinking all of my g@mes for another site. If you have any questions please open an issue!
 
 > **Note**
 > You can view the full license [here](https://github.com/hypackel/hypackel.github.io/blob/main/LICENSE.md)!
