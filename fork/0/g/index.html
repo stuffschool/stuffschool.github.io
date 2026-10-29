@@ -1,176 +1,166 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  
-  <title>G@mes | Hypackel</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/favicon.ico" />
-  <link rel="stylesheet" href="../assets/css/Games.css" />
-  <link rel="stylesheet" href="search.css">
-  <script src="search.js"></script>
-  <script src="/fork/0/assets/js/nodrag.js"></script>
-  <link rel="stylesheet" href="/fork/0/assets/css/tos.css">
-  <link rel="stylesheet" href="/fork/0/assets/css/rainbow.css">
+  <title>G@mes | Hypackel</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="stylesheet" href="https://schoolstuff5.github.io/schoolstuff.css">
   <style>
-    .adblocker {
-      text-align: center;
-      padding-left: 100% 0 0;
-      margin: 0;
-      justify-content: center;
-      display: flex;
-      overflow: hidden;
-      background-color: #222;
-      height: 180px;
-      width: 640px;
-      border-radius: 10px;
-      margin: 4em 0 4em;
-      border: 1px solid #000;
-    }
-
-    .adblocker .adblock-text {
-      width: 350px;
-      margin: 20px;
-    }
-
-    .adblocker img {
-      margin: 20px;
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: Arial, Helvetica, sans-serif; background: #002347; color: white; }
+    .centeredtxt { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0; padding: 10px 12px; }
+    .centeredtxt a { color: white; text-decoration: none; padding: 12px 18px; margin: 3px; border-radius: 4px; background: rgba(0,0,0,.18); }
+    .centeredtxt a:hover, .centeredtxt .siteon { background: rgba(0,0,0,.35); }
+    .logo { display: flex; justify-content: center; padding: 20px 12px 14px; }
+    .logo img { width: min(480px, 82vw); max-height: 160px; object-fit: contain; }
+    hr { border: 0; border-top: 1px solid rgba(255,255,255,.55); margin: 0 0 26px; }
+    h3 { text-align: center; margin: 24px 0 18px; font-size: 1.35rem; font-weight: 600; }
+    .search-wrap { display: flex; justify-content: center; padding: 0 16px 24px; }
+    #search-bar { width: min(600px, 100%); padding: 12px 15px; border: 1px solid rgba(255,255,255,.45); border-radius: 5px; background: rgba(255,255,255,.93); color: #222; font-size: 16px; outline: none; }
+    #search-bar::placeholder { color: #666; }
+    #search-bar:focus { border-color: #222; }
+    .gamelinks { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 16px; padding: 0 3% 40px; }
+    .game-card { display: block; min-width: 0; padding: 0; border-radius: 0; background: transparent; color: white; text-decoration: none; transition: transform .15s ease; overflow: hidden; }
+    .game-card:hover { transform: scale(1.04); background: transparent; }
+    .image-container { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 2px; background: rgba(0,0,0,.15); }
+    .image-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .game-card h3 { display: none; }
+    #empty-message { display: none; text-align: center; padding: 0 16px 35px; }
+    #tab { text-align: center; padding: 0 12px 20px; }
+    #tab select { margin-left: 8px; padding: 7px 10px; color: white; background: #344332; border: 1px solid rgba(255,255,255,.4); border-radius: 4px; }
+    #tab option { background: #344332; color: white; }
+    footer { text-align: center; padding: 25px 12px 35px; color: rgba(255,255,255,.8); }
+    @media (max-width: 900px) { .gamelinks { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; } }
+    @media (max-width: 520px) { .gamelinks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-left: 12px; padding-right: 12px; } .centeredtxt a { padding: 10px 12px; } }
   </style>
 </head>
-
 <body>
-  <a href="https://bit.ly/hypackel">
-    <div class="text-left banner-head">
-      <h6 style="font-size: 1.4rem;font-family: Arial, Helvetica, sans-serif;margin-top:1.3em;margin-left: 2em;color:#fff;">TDo you want more G@mes? Head to https://bit.ly/hypackel for updated and better G@mes.</h6>
-    </div> 
-    <br><br><br><br>
-    <!-- <span style="font-size:41.5px;visibility: hidden;">hiejkfbekfjfbekjfbewkjfbewfkbjewfjkbwefbjkewbkjfejbkefbjkewjkbfjkbfkbejefjkbewjbkfewbjk</span> -->
-  </a>
-  <header class="header">
-    <div class="logo">
-      <button class="menu-item" onclick="window.location.href='/'">
-        <img width="120" src="/Logo-lightC.png" alt="Hypackel">
-      </button>
-    </div>
-    <nav class="menu">
-      <button class="menu-item" onclick="window.location.href='/fork/0/g/'">
-        G@mes
-      </button>
-      
-      
-      <a class="rainbow_text_animated" style="font-size:3px;color: white;" href="https://discord.gg/EAxpQn2yZ4">
-        <button class="menu-item" onclick="window.location.href='https://discord.gg/EAxpQn2yZ4'">
-        <h34 style="font-size:18px;" class="rainbow rainbow_text_animated">Discord</h34>
-      </button>
-      </a>
-    </nav>
-  </header>
-  <style>
-    select option,
-    .select2 {
-      background: rgba(0, 0, 0, 0.3);
-      color: #fff;
-    }
-  </style>
+  <nav class="centeredtxt">
+    <a class="siteon" href="/">Home</a>
+    <a href="https://schoolstuff5.github.io/clegga/">Clegga Clicker/Tetris</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdY-NnrPJ1Lo-WcU_t3JNR-3kJ2uYQRxcCzfXi1Zr4tk8ylnA/viewform?usp=header">Feedback</a>
+    <a href="schoolstuffabout.html">About</a>
+  </nav>
+
+  <div class="logo">
+    <img src="https://schoolstuff5.github.io/schoolstuff/School%20Stuff.png" alt="School Stuff">
+  </div>
+  <hr>
+
   <div id="tab">
-    <b style="color: #fff;">Tab cloak:</b>
-    <select id="tabCloak" class="select2">
-      <option>Default</option>
-      <option>Schoology</option>
-      <option>Google Docs</option>
-      <option>Desmos</option>
-      <option>Desmos graphing</option>
-      <option>Google classroom</option>
-      <option>NoRedInk</option>
-      <option>Lexia Core5</option>
-      <option>Lexia PowerUp</option>
-      <option>Mathspace</option>
-      <option>Kahoot</option>
-      <option>Google Sheets</option>
-      <option>Google Slides</option>
-      <option>Google Sites</option>
-      <option>Google Forms</option>
-<option>Google Drive</option>
+    <label for="tabCloak"><strong>Tab cloak:</strong></label>
+    <select id="tabCloak">
+      <option>Default</option><option>Schoology</option><option>Google Docs</option><option>Desmos</option>
+      <option>Desmos graphing</option><option>Google classroom</option><option>NoRedInk</option>
+      <option>Lexia Core5</option><option>Lexia PowerUp</option><option>Mathspace</option><option>Kahoot</option>
+      <option>Google Sheets</option><option>Google Slides</option><option>Google Sites</option><option>Google Forms</option><option>Google Drive</option>
     </select>
   </div>
-    <script>
-      fetch('G@mes.json')
-        .then(response => response.json())
-        .then(data => {
-          const gameContainer = document.getElementById('game-container');
 
-          data.forEach(game => {
-            const gameCard = document.createElement('div');
-            gameCard.classList.add('game-card');
-
-            gameCard.addEventListener('click', function () {
-              if (game.requiresProxy) {
-                const userResponse = prompt('A Proxy or VPN is required to play this game. Do you have a proxy or VPN enabled? (yes/no)');
-
-                if (userResponse && userResponse.toLowerCase() === 'yes') {
-                  window.location.href = game.url;
-                } else {
-                  alert('You need a proxy or VPN to play this game. Please enable one and come back.');
-                }
-              } else {
-                window.location.href = game.url;
-              }
-            });
-
-            const imageContainer = document.createElement('div');
-            imageContainer.classList.add('image-container');
-
-            const img = document.createElement('img');
-            img.src = game.imageSrc;
-            img.onerror = function () {
-              this.src = '/fork/image-placeholder.png';
-            };
-
-            const h3 = document.createElement('h3');
-            h3.textContent = game.name;
-
-            imageContainer.appendChild(img);
-            gameCard.appendChild(imageContainer);
-            gameCard.appendChild(h3);
-            gameContainer.appendChild(gameCard);
-          });
-        })
-        .catch(error => {
-          console.error('Error loading JSON data:', error);
-        });
-
-
-    </script>
-    <center>
-      <br>
-      <!-- <div class="adblocker"><img src="./adblocker.png" height="140"><span class="adblock-text"><h2>Hello user!</h2><p>We appreciate your visit! To help keep our content free, please consider disabling your adblocker. Our ads are non-intrusive and support our site. Thank you for your support!</p><br><span style="text-decoration: none; color: #2863c2; cursor: pointer;">Do not sell my personal information</span></span><br></div> -->
-      <input type="text" id="search-bar" placeholder="Search..." oninput="search()" class="search-input" />
-      <!-- <p>Need to take down your game? <a href="javascript:Open DMCA in new window;" onclick="window.open('https://github.com/Hypackel/Hypackel.github.io/issues/new?assignees=Hypackel&labels=DMCA&projects=&template=dmca.yaml&title=[DMCA]:<title>', '_blank', 'width=800,height=600'); return false;">DMCA</a> (Opens in a new window)</p> -->
-      <br><br>
-    </center>
-     <div class="game-container" id="game-container">
-      <!--onerror="this.src='https://www.livenirvana.com/demotapes/images/no-image.png'" DEFAULT: onerror="this.src='../../static/image-placeholder.svg'"-->
-      <a style="color: white;" href="https://github.com/hypackel/hypackel.github.io/issues/new?assignees=hypacker&labels=Add-Game&projects=&template=add_game.yml&title=%5BGame+Recommendation%5D%3A+%3Ctitle%3E"><div class="game-card"
-        onclick="window.location.href='https://github.com/hypackel/hypackel.github.io/issues/new?assignees=hypacker&labels=Add-Game&projects=&template=add_game.yml&title=%5BGame+Recommendation%5D%3A+%3Ctitle%3E'">
-        <div class="image-container">
-          <img src="request-svg.png" onerror="this.src='../../static/image-placeholder.svg'" />
-        </div>
-        <h3>Add a game!</h3>
-      </div>
-    </a>
-    <!--note to myself: The div below is for the TOS don't touch it!
-    https://github.com/hypackel/hypackel.github.io/issues/new?assignees=hypacker&labels=Add-Game&projects=&template=add_game.yml&title=%5BGame+Recommendation%5D%3A+%3Ctitle%3E
-    -->
+  <h3>Popular Games</h3>
+  <div class="search-wrap">
+    <input type="search" id="search-bar" placeholder="Search games..." autocomplete="off" aria-label="Search games">
   </div>
-  <footer style="margin-bottom: 4em; margin-top: 9em;">
-    <center>&copy; 2023 Hypackel<br><br><a
-    <center>
-      <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=155704&s=288' border='0'
-          alt='Counter'><br /></div>
-    </center>
-  </footer>
-  <script src="/vobs.js"></script>
-</body>
+  <div class="gamelinks" id="game-container">
+    <a class="game-card" href="https://github.com/hypackel/hypackel.github.io/issues/new?assignees=hypacker&labels=Add-Game&projects=&template=add_game.yml&title=%5BGame+Recommendation%5D%3A+%3Ctitle%3E">
+      <div class="image-container"><img src="/fork/image-placeholder.png" alt=""></div>
+      <h3>Add a game!</h3>
+    </a>
+  </div>
+  <p id="empty-message">No games match your search.</p>
 
+  <footer>© 2023 Hypackel</footer>
+
+  <script>
+    const gameContainer = document.getElementById('game-container');
+    const searchBar = document.getElementById('search-bar');
+    const emptyMessage = document.getElementById('empty-message');
+    let gameCards = [];
+
+    fetch('G@mes.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Could not load G@mes.json');
+        return response.json();
+      })
+      .then(games => {
+        games.forEach(game => {
+          const card = document.createElement('a');
+          card.className = 'game-card';
+          card.href = game.url;
+          card.dataset.name = String(game.name || '').toLowerCase();
+
+          card.addEventListener('click', event => {
+            if (game.requiresProxy) {
+              const answer = prompt('A Proxy or VPN is required to play this game. Do you have a proxy or VPN enabled? (yes/no)');
+              if (!answer || answer.toLowerCase() !== 'yes') {
+                event.preventDefault();
+                alert('You need a proxy or VPN to play this game. Please enable one and come back.');
+              }
+            }
+          });
+
+          const imageContainer = document.createElement('div');
+          imageContainer.className = 'image-container';
+          const image = document.createElement('img');
+          image.src = game.imageSrc || '/fork/image-placeholder.png';
+          image.alt = game.name || 'Game';
+          image.loading = 'lazy';
+          image.onerror = function () { this.onerror = null; this.src = '/fork/image-placeholder.png'; };
+          imageContainer.appendChild(image);
+
+          const title = document.createElement('h3');
+          title.textContent = game.name || 'Untitled game';
+          card.append(imageContainer, title);
+          gameContainer.appendChild(card);
+          gameCards.push(card);
+        });
+        filterGames();
+      })
+      .catch(error => {
+        console.error('Error loading JSON data:', error);
+        emptyMessage.textContent = 'Games could not load. Make sure G@mes.json is in the same folder as this page.';
+        emptyMessage.style.display = 'block';
+      });
+
+    function filterGames() {
+      const query = searchBar.value.trim().toLowerCase();
+      let visibleCount = 0;
+      gameCards.forEach(card => {
+        const matches = card.dataset.name.includes(query);
+        card.style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+      emptyMessage.style.display = gameCards.length && visibleCount === 0 ? 'block' : 'none';
+    }
+    searchBar.addEventListener('input', filterGames);
+
+    const cloakSettings = {
+      'Default': { title: 'G@mes | Hypackel', icon: '/favicon.ico' },
+      'Schoology': { title: 'Home | Schoology', icon: 'https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico' },
+      'Google Docs': { title: 'Google Docs', icon: 'https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico' },
+      'Desmos': { title: 'Desmos | Beautiful, Free Math', icon: 'https://www.desmos.com/assets/img/apps/graphing/favicon.ico' },
+      'Desmos graphing': { title: 'Graphing Calculator', icon: 'https://www.desmos.com/assets/img/apps/graphing/favicon.ico' },
+      'Google classroom': { title: 'Google Classroom', icon: 'https://www.gstatic.com/classroom/logo_square_rounded.svg' },
+      'NoRedInk': { title: 'NoRedInk', icon: 'https://www.noredink.com/favicon.ico' },
+      'Lexia Core5': { title: 'Lexia Core5', icon: 'https://www.lexialearning.com/favicon.ico' },
+      'Lexia PowerUp': { title: 'Lexia PowerUp', icon: 'https://www.lexialearning.com/favicon.ico' },
+      'Mathspace': { title: 'Mathspace', icon: 'https://mathspace.co/favicon.ico' },
+      'Kahoot': { title: 'Kahoot!', icon: 'https://assets-cdn.kahoot.it/builder/v2/assets/favicon.ico' },
+      'Google Sheets': { title: 'Google Sheets', icon: 'https://ssl.gstatic.com/docs/spreadsheets/favicon3.ico' },
+      'Google Slides': { title: 'Google Slides', icon: 'https://ssl.gstatic.com/docs/presentations/images/favicon5.ico' },
+      'Google Sites': { title: 'Google Sites', icon: 'https://www.gstatic.com/images/branding/product/1x/sites_2020q4_48dp.png' },
+      'Google Forms': { title: 'Google Forms', icon: 'https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png' },
+      'Google Drive': { title: 'Google Drive', icon: 'https://drive.google.com/favicon.ico' }
+    };
+    document.getElementById('tabCloak').addEventListener('change', function () {
+      const setting = cloakSettings[this.value];
+      if (!setting) return;
+      document.title = setting.title;
+      let favicon = document.querySelector('link[rel~="icon"]');
+      if (!favicon) { favicon = document.createElement('link'); favicon.rel = 'icon'; document.head.appendChild(favicon); }
+      favicon.href = setting.icon;
+    });
+  </script>
+</body>
 </html>
